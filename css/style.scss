@@ -312,11 +312,27 @@ header {
 .Logos {
 
     .container {
+
         padding-top: 50px;
         padding-bottom: 90px;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
+
+        .square {
+            padding-left: 70px;
+        }
+
+        @media (min-width: 1200px) {
+             
+            justify-content: flex-start;
+            
+            .square {
+                padding-left: 0px;
+            }
+        }
+
     }
 }
 
@@ -326,12 +342,19 @@ header {
     justify-content: center;
 
     .borderWrapper {
-        width: 1520px;
-        height: 600px;
 
-        border: 1px solid #c9c9c9;
+
+
+        @media (min-width: 1200px) {
+            width: 1520px;
+            height: 600px;
+    
+            border: 1px solid #c9c9c9;
+       }
     }    
+
     .container {
+         
         padding-top: 90px;
         display: grid;
         grid-template-columns: repeat(8, 1fr);
@@ -340,13 +363,14 @@ header {
 
 
         .section-title {
-            grid-column: 1 / 4;
+            grid-column: 1 / 8;
             grid-row: 1 / 2;
             padding-right: 60px;
             
 
             h2 {
                 padding-bottom: 40px;
+                width: 400px;
             }
         }
 
@@ -354,9 +378,9 @@ header {
 
             height: 50px;
             padding-top: 12px;
-            grid-column: 1 / 4;
+            grid-column: 1 / 8;
             grid-row: 2 / 2;
-            width: 90%;
+            width: 50%;
 
             i{
                 font-size: 15px;
@@ -385,28 +409,79 @@ header {
 
         .Advice {
 
-            grid-column: 4 / 6;
-            grid-row: 1 / 2;
+            grid-column: 1 / 4;
+            grid-row: 3/ 4;
         }
 
         .Startup {
 
-            grid-column: 6 / 8;
-            grid-row: 1 / 2;
+            grid-column: 4 / 8;
+            grid-row: 3 / 4;
 
         }
 
         .Financial {
 
-            grid-column: 4 / 6;
-            grid-row: 2 / 2;
+            grid-column: 1 / 4;
+            grid-row: 4 / 5;
         }
 
         .Risk {
 
-            grid-column: 6 / 8;
-            grid-row: 2 / 2;
+            grid-column: 4 / 8;
+            grid-row: 4 / 5;
         }
+        
+        
+        @media (min-width: 1200px) {
+
+            .section-title {
+                grid-column: 1 / 4;
+                grid-row: 1 / 2;
+
+                h2 {
+                    width: 450px;
+                }
+
+            }
+    
+            .button {
+    
+                grid-column: 1 / 4;
+                grid-row: 2 / 2;
+                width: 90%;
+    
+            }
+
+            .Advice {
+    
+                grid-column: 4 / 6;
+                grid-row: 1 / 2;
+            }
+    
+            .Startup {
+    
+                grid-column: 6 / 8;
+                grid-row: 1 / 2;
+    
+            }
+    
+            .Financial {
+    
+                grid-column: 4 / 6;
+                grid-row: 2 / 2;
+            }
+    
+            .Risk {
+    
+                grid-column: 6 / 8;
+                grid-row: 2 / 2;
+            }
+
+
+       }
+
+        
     }
 
 
@@ -419,7 +494,9 @@ header {
     padding-bottom: 120px;
 
     .container {
+
         display: flex;
+        flex-direction: column;
 
 
         .image {
@@ -454,13 +531,14 @@ header {
         .about-company {
 
 
-            padding-left: 180px;
+            padding-left: 60px;
                  
             h2 {
-                padding-right: 60px;
+                width: 400px;
             }
             p {
-                padding-top: 30px;
+                width: 400px;
+                padding-top: 40px;
                 padding-right: 40px;
             }
 
@@ -484,6 +562,26 @@ header {
 
         }
 
+        @media (min-width: 1200px) {
+
+            flex-direction: row;
+
+            .about-company {
+
+
+                padding-left: 180px;
+                     
+                h2 {
+                    width: 450px;
+                }
+                p {
+                    width: 450px;
+                    padding-top: 30px;
+                }
+    
+            }
+        }
+
     }
        
 }
@@ -503,12 +601,17 @@ header {
         flex-direction: column;
         .section-title {
             width: 475px;
-            padding-bottom: 50px;
+            padding-bottom: 30px;
         }
 
         .cards {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
+
+            .card {
+                margin-top: 30px;
+            }
         }
 
         .button {
@@ -519,6 +622,16 @@ header {
 
     }
 
+    @media (min-width: 1200px) {
+
+        .cards {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    
+
 }
 
 .whyUs {
@@ -527,16 +640,63 @@ header {
 
     .container {
         display: flex;
-        padding: 60px 0px 120px 0px;
+        flex-wrap: wrap;
+        padding: 60px 0px 180px 0px;
 
 
 
         .section-title {
-            width: 400px;
+            width: 800px;
+
+            display: flex;
+            flex-wrap: wrap;
 
             h2 {
-                max-width: 370px;
+                width: 800px;
+                padding-right: 400px;
             }
+
+            article {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                display: flex;
+                flex-wrap: wrap;
+
+                div {
+                    position: relative;
+                    display: flex;
+                    flex-direction:column;
+                    padding-top: 20px;
+                    width: 300px;
+                }
+    
+                h3 {
+    
+                    font-family: 'DM Sans', sans-serif;
+                    font-weight: 700;
+                    font-size: 22px;
+                    color: #191919;
+                    padding-bottom: 5px;
+                    padding-left: 70px;
+    
+                }
+    
+                p {
+                    color: #191919;
+                    padding-left: 70px;
+                }
+    
+                i {
+                    font-size: 30px;
+                    padding: 12px;
+                    border-radius: 50%;
+                    border: 1px solid rgb(214, 212, 212);
+                    width: 55px;
+                    position: absolute;
+                }
+            }
+
+
         }
 
         .image {
@@ -551,7 +711,7 @@ header {
 
             flex: 1;
             display: flex;
-            justify-content: flex-end;
+
 
             img {
                 padding-top: 30px;
@@ -561,40 +721,43 @@ header {
             }
         }
 
-        article {
 
-            div {
-                position: relative;
-                display: flex;
-                flex-direction:column;
-                padding-top: 35px;
+
+        
+
+    }
+
+    @media (min-width: 1200px) {
+
+        .container {
+            padding: 60px 0px 120px 0px;
+        
+
+            .section-title {
+                width: 450px;
+    
+                h2 {
+                    width: 450px;
+                    padding-right: 0px;
+                }
+
+                article {
+                    div {
+                        width: 450px;
+                    }
+                }
+
             }
 
-            h3 {
-
-                font-family: 'DM Sans', sans-serif;
-                font-weight: 700;
-                font-size: 22px;
-                color: #191919;
-                padding-bottom: 5px;
-                padding-left: 70px;
-
+            img {
+                margin-left: 150px;
+                
             }
 
-            p {
-                color: #191919;
-                padding-left: 70px;
-            }
 
-            i {
-                font-size: 30px;
-                padding: 12px;
-                border-radius: 50%;
-                border: 1px solid rgb(214, 212, 212);
-                width: 55px;
-                position: absolute;
-            }
         }
+
+
 
     }
 }
@@ -610,10 +773,8 @@ header {
         }
 
         .grid {
-            width: 100%;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(1, 1fr);
             column-gap: 30px;
 
             h3 {
@@ -644,6 +805,13 @@ header {
 
         }
 
+        @media (min-width: 1200px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+        }
+
 
 
 
@@ -657,14 +825,14 @@ header {
 
     .container {
 
-
         .wrapper {
             padding-top: 120px;
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
 
             .button {
-                align-self: flex-end;
+                margin-top: 20px;
                 background-color: #F9D783;
                 border: 1px solid #191919;
                 height: 50px;
@@ -680,8 +848,9 @@ header {
 
         .teamMembers {
 
-            padding-top: 100px;
+            padding-top: 20px;
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
 
             h3 {
@@ -697,6 +866,22 @@ header {
             padding-top: 50px;
             display: block;
             margin: 0px auto 0px auto;
+        }
+
+        @media (min-width: 1200px) {
+            .wrapper {
+
+                .button {
+                    align-self: flex-end;
+                }
+    
+            }
+    
+            .teamMembers {
+    
+                padding-top: 100px;
+
+            }
         }
 
 
@@ -729,12 +914,14 @@ header {
         .reviewCards {
 
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             padding-bottom: 100px;
 
             article {
                 width: 410px;
                 padding-right: 100px;
+                padding-bottom: 50px;
 
                 img {
                     padding-bottom: 35px
@@ -787,21 +974,24 @@ header {
 
         .header { 
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
             padding-top: 120px;
             padding-bottom: 35px;
     
     
             .button {
-                align-self: flex-end;
+                margin-top: 30px;
                 width: 210px;
                 border: 1px solid #191919;
             }
         }
     
         .articles {
+
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            justify-content: center;
     
             p {
                 color: #6A6C71;
@@ -812,15 +1002,45 @@ header {
                 width: 300px;
                 font-size: 22px;
             }
+
+            img {
+                padding-top: 60px;
+            }
     
         
         }
-    
-        img {
-            padding-top: 60px;
-            align-self: center;
+
+        .dots {
+            visibility: hidden;
         }
+
+        @media (min-width: 1200px) {
+
+
+            .button {
+                align-self: flex-end;
+                width: 210px;
+                border: 1px solid #191919;
+            }
+          
+    
+            .articles {
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+    
+    
+            .dots {
+                visibility: visible;
+                padding-top: 60px;
+                align-self: center;
+            }
+        }
+
+
     }
+
+
 
 }
 
@@ -833,12 +1053,24 @@ header {
     .container {
         
         display: flex;
-        justify-content: center;
+
+        align-self: center;
         padding-top: 120px;
         padding-bottom: 100px;
 
-        input[type=text] {
+        .button {
+            display: flex;
+            align-items: center;
+            height: 60px;
+            width: 300px;
 
+            i {
+                padding-top: 5px;
+            }
+        }
+
+        input[type=text] {
+            height: 60px;
             color: #707070;
             border: 1px solid white;
             border-radius: 25px;
@@ -848,6 +1080,16 @@ header {
             margin-right: 20px;
 
         }
+
+        @media (min-width: 1200px) {
+            .button {
+                width: 200px;
+                justify-content: center;
+                
+            }
+
+        }
+
 
 
     }
